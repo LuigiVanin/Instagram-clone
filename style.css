@@ -44,11 +44,16 @@ header {
     padding-left: 5px;
 }
 
-.container .logo .insta {
+.container .logo .insta,
+.container .logo .icons {
     font-size: 20px;
     padding-right: 5px;
     padding-block: 1px;
     border-right: 1px solid #dbdbdb;
+}
+
+.container .logo .mobile {
+    display: none;
 }
 
 .container .search {
@@ -219,10 +224,9 @@ main .main__container {
     margin-right: 300px;
 }
 
-.main__container .stories {
+.stories {
     width: 100%;
     height: 118px;
-    background: chartreuse;
     background: white;
     margin-block: 25px;
 
@@ -237,6 +241,21 @@ main .main__container {
 
     /* sem o border box pois sem ele o ícones do stories vazam da caixa, mesmo com overflow hidden*/
     box-sizing: border-box;
+}
+
+.stories .arrow {
+    position: absolute;
+    right: 5px;
+    top: calc(50% - 13px);
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.329);
 }
 
 .stories .row {
@@ -292,7 +311,7 @@ main .main__container {
     flex-direction: column;
 }
 
-.posts .item img.feed {
+.posts .item .feed {
     width: 100%;
 }
 
@@ -367,6 +386,17 @@ main .main__container {
     font-size: 19px;
 }
 
+main .menu {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    border-top: 1px solid #dbdbdb;
+    width: 100%;
+    height: 54px;
+    background: white;
+}
+
 @media (max-width: 935px) {
     .side-bar {
         display: none;
@@ -378,5 +408,60 @@ main .main__container {
 
     header .container {
         margin-inline: 10px;
+    }
+}
+
+@media (max-width: 614px) {
+    .stories {
+        background: transparent;
+        border: none;
+        margin-block: 5px;
+    }
+
+    .stories .arrow {
+        display: none;
+    }
+
+    .posts .item {
+        border-inline: 0;
+        border-radius: 0;
+    }
+
+    .container nav {
+        display: none;
+    }
+
+    .container .search {
+        display: none;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .container .logo {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .container .logo .insta {
+        border: 0;
+    }
+
+    .container .logo .mobile {
+        display: block;
+        border: 0;
+    }
+
+    main .menu {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 25px;
+    }
+
+    main .menu ion-icon {
+        font-size: 24px;
     }
 }
