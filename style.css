@@ -343,18 +343,20 @@ main .main__container {
     line-height: 16px;
 }
 
-.posts .item .bot {
-    height: 80px;
+.bot {
+    /* min-height: 80px; */
     padding-inline: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 0px;
+    padding-block: 15px;
 }
 
 .bot .interact {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .bot .interact .left {
@@ -366,9 +368,10 @@ main .main__container {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-bottom: 5px;
 }
 
-.desc h2 {
+.bot h2 {
     padding-top: 2px;
     font-style: normal;
     font-weight: 300;
@@ -380,6 +383,46 @@ main .main__container {
     border-radius: 50%;
     width: 20px;
     height: 20px;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment {
+    margin-top: 10px;
+}
+
+.comment .box {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.box p {
+    align-items: center;
+    display: flex;
+    font-size: 13px;
+    gap: 5px;
+    color: rgb(116, 116, 116);
+}
+
+.comment .box img {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.info span {
+    font-weight: bolder;
+}
+
+.info p {
+    font-size: 10px;
+    color: rgb(116, 116, 116);
 }
 
 .posts .item .icons {
